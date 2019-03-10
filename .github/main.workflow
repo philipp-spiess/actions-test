@@ -4,11 +4,11 @@ workflow "New workflow" {
 }
 
 action "lshw" {
-  uses = "actions/bin/sh@master"
+  uses = "./debian"
   args = ["lshw"]
 }
 
 action "cpuinfo" {
-  uses = "actions/bin/sh@master"
+  uses = "./debian"
   args = ["cat", "/proc/cpuinfo"]
 }
