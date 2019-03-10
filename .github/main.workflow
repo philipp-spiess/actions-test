@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["lshw", "fdisk", "lsblk", "ip"]
+  resolves = ["lshw fdisk", "lsblk", "ip"]
 }
 
 action "lshw" {
@@ -10,15 +10,15 @@ action "lshw" {
 
 action "fdisk" {
   uses = "./debian"
-  args = ["fdisk", "-l"]
+  args = ["fdisk -l"]
 }
 
 action "lsblk" {
   uses = "./debian"
-  args = ["lsblk", "-d", "-o", "name,rota"]
+  args = ["lsblk -d -o name,rota"]
 }
 
 action "ip" {
   uses = "./debian"
-  args = ["curl", "https://ipinfo.io/ip"]
+  args = ["curl https://ipinfo.io/ip"]
 }
