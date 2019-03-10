@@ -9,6 +9,9 @@ LABEL "com.github.actions.description"="Runs one or more commands in an Action"
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="gray-dark"
 
+RUN apt-get update && apt-get install -y \
+  lshw
+
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
 COPY entrypoint.sh /entrypoint.sh
