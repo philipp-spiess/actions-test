@@ -10,7 +10,8 @@ LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="gray-dark"
 
 RUN apt-get update && apt-get install -y \
-  lshw
+  lshw \
+  curl
 
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
