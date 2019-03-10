@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["lshw fdisk", "lsblk", "ip"]
+  resolves = ["lshw", "fdisk", "lsblk", "ip"]
 }
 
 action "lshw" {
